@@ -1,0 +1,18 @@
+<nav class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar" style="background-color: blueviolet; color: white;">
+    <div class="container">
+      <a class="navbar-brand">Branef</a>
+      <button class="navbar-toggler" type="button" (click)="isCollapsed = !isCollapsed" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive" [ngbCollapse]="isCollapsed">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/lista']" >Clientes</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  

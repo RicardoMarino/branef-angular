@@ -1,0 +1,36 @@
+<div class="container main-container">
+    <h1>Lista de Clientes</h1>
+  
+    <p>
+        <a class="btn btn-info btn-sm" [routerLink]="['/adicionar']">Novo Cliente</a>
+    </p>
+  
+    <table class="table table-hover table-sm table-strip table-bordered">
+        <thead class="thead">
+            <tr>
+                <th >Nome</th>
+                <th class="text-center">Porte</th>
+                <th class="text-center">Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let cliente of clientes">
+                <td>
+                    {{ cliente.nome }}
+                </td>
+                <td class="text-center">
+                    {{ cliente.porte }}
+                </td>
+                <td class="text-center">
+                    <a class="btn btn-warning btn-sm" [routerLink]="['/editar',cliente.id]">
+                        <span class="fa fa-pencil-alt" ></span>
+                    </a>&nbsp;
+                    <a class="btn btn-danger btn-sm" [routerLink]="['/remover',cliente.id]">
+                        <span class="fa fa-trash"></span>
+                    </a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+  </div>
+  
